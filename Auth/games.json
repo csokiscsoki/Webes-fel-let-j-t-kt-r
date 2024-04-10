@@ -1,0 +1,17 @@
+[
+    {
+        "url": "./mesterlogika/mesterlogika.html",
+        "pic": "./mesterlogika/mesterlogika.png",
+        "name": "Mesterlogika"
+    },
+    {
+        "url": "./memória játék/memoriajatek.html",
+        "pic": "./memória játék//memoriajatek.png",
+        "name": "Memória játék"
+    },
+    {
+        "url": "./tilitoli/tilitoli.html",
+        "pic": "./tilitoli/tilitoli.png",
+        "name": "Cserélgető"
+    }
+]

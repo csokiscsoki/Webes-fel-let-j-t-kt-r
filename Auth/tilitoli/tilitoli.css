@@ -1,0 +1,85 @@
+.containerOwn{
+    display: flex;
+    box-shadow: 10px 10px 30px black;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(red, green);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.board{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+}
+.btn-success{
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    width: 8vw;
+}
+.btn-warning{
+    scale: 2;
+}
+.hidden{
+    display: none;
+}
+.kocka{
+    height: 200px;
+    width: 200px;
+    transition: transform 0.3s ease;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.kocka:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#kocka0{
+    background-image: url("./img/face1.png");
+    background-size: 200px 200px;
+}
+#kocka1{
+    background-image: url("./img/face2.png");
+    background-size: 200px 200px;
+}
+#kocka2{
+    background-image: url("./img/face3.png");
+    background-size: 200px 200px;
+}
+#kocka3{
+    background-image: url("./img/face4.png");
+    background-size: 200px 200px;
+}
+#kocka4{
+    background-image: url("./img/face5.png");
+    background-size: 200px 200px;
+}
+#kocka5{
+    background-image: url("./img/face6.png");
+    background-size: 200px 200px;
+}
+#kocka6{
+    background-image: url("./img/face7.png");
+    background-size: 200px 200px;
+}
+#kocka7{
+    background-image: url("./img/face8.png");
+    background-size: 200px 200px;
+}
+#kocka8{
+    background-image: url("./img/face9.png");
+    background-size: 200px 200px;
+}
+/*"./img/face1.png",
+"./img/face2.png",
+"./img/face3.png",
+"./img/face4.png",
+"./img/face5.png",
+"./img/face6.png",
+"./img/face7.png",
+"./img/face8.png",
+"./img/face9.png"*/

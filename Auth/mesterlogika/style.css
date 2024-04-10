@@ -1,0 +1,102 @@
+/*{margin: 0; padding: 0; box-sizing: border-box;}*/
+.frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(135deg, cyan, blue);
+    flex-direction: column;
+}
+.containerOwn{
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    row-gap: 0px;
+    box-shadow: 10px 10px 30px black;
+    width: 90vh;
+    z-index: 999;
+    border-radius: 10px;    
+}
+.rowOwn{
+    display: grid;
+    grid-template-columns: 1fr 4fr;/*result, guess*/
+    border: 1px solid black;
+    height: 8vh;
+    /*width: 100%;*/
+    background-color: rgb(172, 134, 54);
+    border-radius: 10px;    
+
+}
+.result{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1rem;
+    column-gap: 2px;
+    align-items: center;
+}
+.items{
+    border: 1px solid black;
+    background-color: rgba(253, 102, 102, 0.508);
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+}
+.guess{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 1rem;
+}
+.colors{
+    border: 1px solid black;
+}
+.colors{
+    margin: 1px;
+    border-radius: 10px;
+    width: 70%;
+}
+.colors:hover{
+    cursor: pointer;
+    
+    scale: 1.01;
+}
+.colors:active{
+    scale: 1;
+}
+.inactiveField{
+    cursor: not-allowed;
+}
+.passiveField{
+    display: none;
+}
+.btn-warning{
+    margin-bottom: 1rem;
+    transform: scale(1) ;
+    transition: transform 0.3s ease;
+
+}
+.btn-warning:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.btn-warning:active{
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+.btn-success{
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    width: 8vw;
+}
+.hidden{
+    display: none;
+}
+/*.takar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(156, 19, 156, 0.5);  Piros szín félig átlátszó 
+    z-index: 9999;                              Biztosítja, hogy az elem legfelül legyen
+}*/

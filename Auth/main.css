@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    width: 100vw;
+    row-gap: 3rem;
+}
+
+.hBox {
+    width: 10vw;
+    height: 5vh;
+    background-color: #FFE8D6;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: transform 0.3s ease;
+}
+
+.header {
+    display: flex;
+    padding: 3vw;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: #6b705c;
+    height: 15vh;
+    width: 100%;
+}
+
+header {
+    height: 20vh;
+    width: 100%;
+}
+
+.hBox:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.header :nth-child(2) {
+    width: 20vw;
+    margin: 0 25vw;
+    margin-left: 30vw;
+    visibility: hidden;
+}
+
+/*.header :nth-child(3){
+    margin-right: -5rem;
+}*/
+.containerOwn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;
+}
+
+.gameCard {
+    transition: transform 0.3s ease;
+}
+
+.gameCard:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 18%;
+    right: 2%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.popup.active {
+    display: block;
+}
+.hidden{
+    display: none;
+}
+.popup2 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    max-width: auto;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.popup2.active {
+    display: block;
+}
+
+.leiras{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+}

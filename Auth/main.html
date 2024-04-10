@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta name="author" content="Horváth Márton">
+        <meta name="description" content Demo site>
+        <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+            defer></script>
+        <!--Saját:-->
+        <script src="./main.js" defer></script>
+        <link rel="stylesheet" href="./main.css">
+        <title>Játékok</title>
+    </head>
+    <body>
+        <main>
+            <h1 class="message hidden"></h1>
+            <div class="header">
+                <div class="hBox popupBtn2">A játékokról</div>
+                <div class="hBox">Pontok</div>
+                <div class="hBox popupBtn">Profil</div>
+                <div class="hBox logoutBtn">Kijelentkezés</div>
+            </div>
+            <div class="containerOwn">
+                <div id="popup" class="popup">
+                    <h3 class="userName"></h3>
+                    <h5 class="fullName"></h5>
+                </div>
+                <div class="pts hidden">
+                    <div class="game1"></div>
+                    <div class="game2"></div>
+                    <div class="game3"></div>
+                </div>
+                <div id="popup2" class="popup2">
+                    <div class="leiras">
+                        <h1>Mesterlogika</h1>
+                        <h1>Memória játék</h1>
+                        <h1>Cserélgető</h1>
+                        <p>A nevéből is kikövetkeztethető játék egy digitalizált formáját próbálhatjuk ki vele. A szabájzat egyszerű; A játékos célja, hogy a gép által kitalált 4 véletlenszerű színt helyes sorrendben kitalálja. Az erre való tippeket a négyzetekre kattintva adhatja meg. A sor végén található <span></span><button type="button" class="btn btn-outline-success">Check</button> gomb segítégével kérhető az adott sor ellenőrzése. Ekkor az ellenőrzött sor már nem hozzáférhető, viszont az elején lévő püttyök színe utal a sorban lévő színek helyességére; Fehér: helyes a szín, és jó helyen is van, Fekete: Helyes szín de rossz helyen van, Átlátszó: Helytelen szín. A játék végén a "Főoldal" gombra kattintva, a főoldalon nézhetjük meg a játék ikonja alatt az eddig elért pontajinkat.</p>
+                        <p>A memóriajátéban az összekevert kártyák lefedve jelennek meg, és kattintásra fedik fel az alattuk lévő gyümölcs képét. A második felfedett kártya után amennyiben ezek eggyeznek, a játékos fojtathatja a felforgatást, ellenkező esetben várnia kell 1.5 másodpercet, amíg a kártyák visszafordulnak, és csak utána fojtathatja a tippelést. A játék végén a "Főoldal" gombra kattintva, a főoldalon nézhetjük meg a játék ikonja alatt az eddig elért pontajinkat.</p>
+                        <p>A Cserélgető egy általam kitalált és fejlesztett logikai játék, amely során egy összekevert képből kell kirakni az eredeti képet, a képdarabokra kattinva. A módszer a következő: Az első képdarabra kattintva az a kártya helyet fog cserélni egy véletlenszerű káryával. Ez után minden egyes kattintással a választott kártya az előzőleg kattintott kártyával fog helyet cserélni. A játék végén a "Főoldal" gombra kattintva, a főoldalon nézhetjük meg a játék ikonja alatt az eddig elért pontajinkat.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script>
+    fetch("./main.php")
+.then(response => {
+    console.log(response);
+    if (!response.ok) {
+        throw new Error("Hiba a kérésben")
+    }
+    return response.json();
+})
+.then(datas => {
+    if (datas["errorCode"] === 2) {
+        alert(datas.errorMessage);
+        location.href = "./login.html";
+    }
+    else {
+        document.querySelector(".userName").innerHTML = datas.dataLine["userName"];
+        document.querySelector(".fullName").innerHTML = datas.dataLine["fullName"];
+        document.querySelector(".game1").innerHTML = datas.dataLine["game1"];
+        document.querySelector(".game2").innerHTML = datas.dataLine["game2"];
+        document.querySelector(".game3").innerHTML = datas.dataLine["game3"];
+    }
+})
+.catch(error => console.log(error))
+</script>
+</html>

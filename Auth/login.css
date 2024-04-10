@@ -1,0 +1,26 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+main{
+    display: flex;
+    height: 100vh;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(65, 197, 178);
+    flex-direction: column;
+}
+.container-my{
+    height:  auto;
+    background-color: rgb(12, 245, 66);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.row{
+    justify-content: center;
+}
+.hidden{
+    display: none;
+}
