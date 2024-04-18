@@ -34,4 +34,3 @@ https://github.com/csokiscsoki/Webes-fel-let-j-t-kt-r.git
 
 ## Szerző
 - Horváth Márton Bendegúz 
-- ChatGPT 3.5
